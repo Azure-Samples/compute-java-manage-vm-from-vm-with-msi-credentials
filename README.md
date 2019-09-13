@@ -4,9 +4,8 @@ languages:
 - java
 products:
 - azure
-extensions:
-- services: Compute
-- platforms: java
+description: "Azure Compute sample for managing virtual machine from Managed Service Identity (MSI) enabled virtual machine"
+urlFragment: compute-java-manage-vm-from-vm-with-msi-credentials
 ---
 
 # Getting Started with Compute - Manage Virtual Machine From MSI Enabled Virtual Machine - in Java #
