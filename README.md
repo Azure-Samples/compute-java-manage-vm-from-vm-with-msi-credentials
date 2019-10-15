@@ -4,35 +4,33 @@ languages:
 - java
 products:
 - azure
-description: "Azure Compute sample for managing virtual machine from Managed Service Identity (MSI) enabled virtual machine"
+description: "Azure Compute sample for managing virtual machine from Managed Service Identity (MSI) enabled virtual machine."
 urlFragment: compute-java-manage-vm-from-vm-with-msi-credentials
 ---
 
-# Getting Started with Compute - Manage Virtual Machine From MSI Enabled Virtual Machine - in Java #
+# Manage Virtual Machine From MSI Enabled Virtual Machine (Java)
 
 
   Azure Compute sample for managing virtual machine from Managed Service Identity (MSI) enabled virtual machine -
     - Create a virtual machine using MSI credentials from System assigned or User Assigned MSI enabled VM.
  
 
-## Running this Sample ##
+## Running this Sample
 
 To run this sample:
 
 Set the environment variable `AZURE_AUTH_LOCATION` with the full path for an auth file. See [how to create an auth file](https://github.com/Azure/azure-libraries-for-java/blob/master/AUTH.md).
 
-    git clone https://github.com/Azure-Samples/compute-java-manage-vm-from-vm-with-msi-credentials.git
+```bash
+git clone https://github.com/Azure-Samples/compute-java-manage-vm-from-vm-with-msi-credentials.git
+cd compute-java-manage-vm-from-vm-with-msi-credentials
+mvn clean compile exec:java
+```
 
-    cd compute-java-manage-vm-from-vm-with-msi-credentials
-
-    mvn clean compile exec:java
-
-## More information ##
+## More information
 
 [http://azure.com/java](http://azure.com/java)
 
-If you don't have a Microsoft Azure subscription you can get a FREE trial account [here](http://go.microsoft.com/fwlink/?LinkId=330212)
-
----
+If you don't have a Microsoft Azure subscription you can get a FREE trial account [here](http://go.microsoft.com/fwlink/?LinkId=330212).
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
