@@ -41,6 +41,7 @@ public final class ManageVirtualMachineFromMSIEnabledVirtualMachine {
         final String subscriptionId = args[0];
         final String resourceGroupName = args[1];
         final String clientId = args.length > 2 ? args[2] : null;
+        final boolean cleanupResource = args.length <= 3 || Boolean.getBoolean(args[3]);
         final String linuxVMName = "yourVirtualMachineName";
         final String userName = "tirekicker";
         final String password = Utils.password();
@@ -82,9 +83,11 @@ public final class ManageVirtualMachineFromMSIEnabledVirtualMachine {
         System.out.println("Created virtual machine using ManagedIdentityCredential.");
         Utils.print(virtualMachine);
 
-        System.out.println("Deleting resource group: " + resourceGroupName);
-        azure.resourceGroups().deleteByName(resourceGroupName);
-        System.out.println("Deleted resource group: " + resourceGroupName);
+        if (cleanupResource) {
+            System.out.println("Deleting resource group: " + resourceGroupName);
+            azure.resourceGroups().deleteByName(resourceGroupName);
+            System.out.println("Deleted resource group: " + resourceGroupName);
+        }
     }
 
     private ManageVirtualMachineFromMSIEnabledVirtualMachine() {
