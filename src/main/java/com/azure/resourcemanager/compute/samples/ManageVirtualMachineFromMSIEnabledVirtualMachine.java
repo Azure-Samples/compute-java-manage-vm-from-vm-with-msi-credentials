@@ -33,7 +33,7 @@ public final class ManageVirtualMachineFromMSIEnabledVirtualMachine {
         // see https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview
         //
 
-        final String usage = "Usage: mvn clean compile exec:java -Dexec.args=\"<subscription-id> <rg-name> [<client-id>]\"";
+        final String usage = "Usage: mvn clean compile exec:java -Dexec.args=\"<subscription-id> <rg-name> [<client-id>] [<cleanup-resource>]\"";
         if (args.length < 2) {
             throw new IllegalArgumentException(usage);
         }
